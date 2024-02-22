@@ -1,12 +1,29 @@
-# Import the struct module
+# Import the struct, os and shutil modules
 import struct
 import os
+import shutil
 
-# Define the path to the input folder
-input_folder = f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Installed\\Effects\\New"
+# Checks and Defines the path to the input folder
+if os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line"):
+    input_folder = f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Installed\\Effects\\New"
+    print("Input Folder - Local Documents")
+elif os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\OneDrive\\Documents\\Image-Line"):
+    input_folder = f"C:\\Users\\{os.environ['USERNAME']}\\OneDrive\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Installed\\Effects\\New"
+    print("Input Folder - OneDrive Documents")
+else:
+    input_folder = input("Enter the path to the input folder: ")
+    print("Input Folder - Custom Folder")
 
-# Define the path to the output folder
-output_folder = f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Effects\\USER"
+# Checks and Defines the path to the output folder
+if os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line"):
+    output_folder = f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Effects\\USER"
+    print("Output Folder - Local Documents")
+elif os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\OneDrive\\Documents\\Image-Line"):
+    output_folder = f"C:\\Users\\{os.environ['USERNAME']}\\OneDrive\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Effects\\USER"
+    print("Output Folder - OneDrive Documents")
+else:
+    output_folder = input("Enter the path to the output folder: ")
+    print("Output Folder - Custom Folder")
 
 # Define the file extension for the plugins
 file_ext = ".fst"
@@ -26,9 +43,6 @@ def read_vendor_name(file_path):
 
 # Define a function to copy a file to a new folder named after the vendor
 def copy_to_vendor_folder(file_path, vendor_name):
-    # Import the os and shutil modules
-    import os
-    import shutil
     # Get the file name from the file path
     file_name = os.path.basename(file_path)
     # Create a new folder path with the output folder and the vendor name
