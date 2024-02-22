@@ -10,17 +10,22 @@ This script is a tool to organize **FL Studio** plugins by vendor name (Eventide
 **TO-DO**: Make sure it's not only compatible for the C: Drive by default (FL Studio's Plugin Database.)
 
 
-**organizeEffects.py or organizeGenerators.py**
+**organizeEffects.py, organizeGenerators.py, or organizeEffectsAndGenerators.py**
 
-**Default installation** 
+**Local Default installation** 
 - C:\Users\USERNAME\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Effects\New
 
 - C:\Users\USERNAME\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Generators\New
 
+**OneDrive Default installation** 
+- C:\Users\USERNAME\OneDrive\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Effects\New
 
-**USERNAME** in the folder paths _should_ automatically be set to your Windows username. if not, run the **CUSTOM** scripts.
+- C:\Users\USERNAME\OneDrive\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Generators\New
 
-**organizeEffectsCUSTOM.py or organizeGeneratorsCUSTOM.py** - You choose both paths.
+
+**USERNAME** in the folder paths _should_ automatically be set to your Windows username. if not, run the **organizeCUSTOM.py** script.
+
+**organizeCUSTOM.py** - You choose both paths.
 
 Results for the default scripts
 
