@@ -1,10 +1,18 @@
-# Import the struct, os and shutil modules
+# Import the struct, os, shutil, and winreg modules
 import struct
 import os
 import shutil
+import winreg
+
+# Checks the Windows Registry to for the "User data folder" path that is set in FL Studio
+win_reg_user_data = winreg.QueryValueEx(winreg.OpenKey(winreg.HKEY_CURRENT_USER,"Software\\Image-Line\\Shared\\Paths"), "Shared data")[0]
+
 
 # Checks and Defines the path to the input folder
-if os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line"):
+if os.path.isdir(win_reg_user_data):
+    input_folder = f"{win_reg_user_data}\\FL Studio\\Presets\\Plugin database\\Installed\\Effects\\New"
+    print("Input Folder - Found via registry")
+elif os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line"):
     input_folder = f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Installed\\Effects\\New"
     print("Input Folder - Local Documents")
 elif os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\OneDrive\\Documents\\Image-Line"):
@@ -15,7 +23,10 @@ else:
     print("Input Folder - Custom Folder")
 
 # Checks and Defines the path to the output folder
-if os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line"):
+if os.path.isdir(win_reg_user_data):
+    output_folder = f"{win_reg_user_data}\\FL Studio\\Presets\\Plugin database\\Effects\\USER"
+    print("Output Folder - Found via registry")
+elif os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line"):
     output_folder = f"C:\\Users\\{os.environ['USERNAME']}\\Documents\\Image-Line\\FL Studio\\Presets\\Plugin database\\Effects\\USER"
     print("Output Folder - Local Documents")
 elif os.path.isdir(f"C:\\Users\\{os.environ['USERNAME']}\\OneDrive\\Documents\\Image-Line"):
