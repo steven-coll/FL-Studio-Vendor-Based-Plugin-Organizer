@@ -7,7 +7,6 @@ import winreg
 # Checks the Windows Registry to for the "User data folder" path that is set in FL Studio
 win_reg_user_data = winreg.QueryValueEx(winreg.OpenKey(winreg.HKEY_CURRENT_USER,"Software\\Image-Line\\Shared\\Paths"), "Shared data")[0]
 
-
 # Checks and Defines the path to the input folder
 if os.path.isdir(win_reg_user_data):
     input_folder = f"{win_reg_user_data}\\FL Studio\\Presets\\Plugin database\\Installed\\Effects\\New"
