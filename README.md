@@ -1,4 +1,4 @@
-TO DOWNLOAD, SIMPLY DOWNLOAD DIRECTLY FROM THE FILES ABOVE. THERE IS NO NEED FOR A RELEASE FILE.
+To download, simply download from the files above. There is no need for a zipped release file.
 
 This script is a tool to organize **FL Studio** plugins by vendor name (Eventide, Roland, Korg, Arturia, etc.) It copies the plugin files from the default installation folder to a user-defined folder (or one I made that is easily accessible), creating subfolders for each company/distributor.
 
