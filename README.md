@@ -1,6 +1,6 @@
 # FL Studio Vendor-Based Plugin Organizer
 
-**FL Studio Vendor-Based Plugin Organizer** is a tool designed to help streamline the organization of your FL Studio plugins by sorting them into vendor-specific folders. This enhances accessibility and helps keep your workflow more efficient in FL Studio.
+**FL Studio Vendor-Based Plugin Organizer** is a tool designed to help streamline the organization of your FL Studio plugins by sorting them into vendor-specific folders for Windows OS. This enhances accessibility and helps keep your workflow more efficient in FL Studio.
 
 ### Graphical User Interface
 <img src="screenshots/example2.png" alt="FL Studio Vendor-Based Plugin OrganizerGUI Screenshot" height="550" width="650"/>
@@ -17,6 +17,7 @@
 ## Installation
 
 ### Prerequisites
+- Windows OS
 - Ensure you have [FL Studio 21](https://www.image-line.com/) installed on your system.
 
 ### Downloading the Application
