@@ -1,56 +1,46 @@
-To download, simply download from the files above. There is no need for a zipped release file.
+# FL Studio Vendor-Based Plugin Organizer
 
-This script is a tool to organize **FL Studio** plugins by vendor name (Eventide, Roland, Korg, Arturia, etc.) It copies the plugin files from the default installation folder to a user-defined folder (or one I made that is easily accessible), creating subfolders for each company/distributor.
+**FL Studio Vendor-Based Plugin Organizer** is a tool designed to help streamline the organization of your FL Studio plugins by sorting them into vendor-specific folders. This enhances accessibility and helps keep your workflow more efficient in FL Studio.
 
-
-**Requirements**
-
-- Python 3.11.4 or higher
-- FL Studio (any version, I think) installed on Windows (Tested and made on Windows 10 64-bit)
+## Example Screenshot
+![FL Studio Vendor-Based Plugin Organizer Screenshot](screenshots/example.png){ width=500 }
 
 
-**TO-DO**: Make sure it's not only compatible for the C: Drive by default (FL Studio's Plugin Database.)
+## Features
+- **Automatic Plugin Organization**: Automatically sorts plugins into vendor folders based on your selected input and output directories.
+- **Supports Both Effects and Generators**: Works with FL Studio's **Effects** and **Generators** folder structures.
+- **User-Friendly GUI**: Simple and intuitive graphical interface for easy folder selection.
+- **Log Output**: Provides a log output to monitor the organization process and track any errors.
 
+## Installation
 
-**organizeEffects.py, organizeGenerators.py, or organizeEffectsAndGenerators.py**
+### Prerequisites
+- Ensure you have [FL Studio 21](https://www.image-line.com/) installed on your system.
 
-**Local Default installation** 
-- C:\Users\USERNAME\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Effects\New
+### Downloading the Application
+1. Download the latest release from the [Releases](https://github.com/yourusername/FL-Studio-Plugin-Organizer/releases) section of the repository.
+2. Extract the contents of the zip file to your preferred location on your computer.
 
-- C:\Users\USERNAME\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Generators\New
+### Running the Application
+1. Locate the `FL Studio Vendor Organizer.exe` file in the extracted folder.
+2. Double-click the executable to launch the application.
+3. The application should open without requiring any additional dependencies or configurations.
 
-**OneDrive Default installation** 
-- C:\Users\USERNAME\OneDrive\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Effects\New
+## Usage
+1. **Select Input and Output Folders**: The application defaults to recommended paths for your FL Studio Effects and Generators. You can change these paths if necessary.
+2. **Start the Organization Process**: Click the **Organize Plugins** button to begin sorting your plugins.
+3. **Monitor Logs**: The application provides log output in the GUI, allowing you to see the progress and any errors encountered during the process.
 
-- C:\Users\USERNAME\OneDrive\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Generators\New
+## Folder Structure
+The application supports the following folder structure:
+- **Input Folder**: Should be from the `\Plugin database\Installed\` folder
+  - For Effects: `C:\Users\{YourUsername}\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Effects`
+  - For Generators: `C:\Users\{YourUsername}\Documents\Image-Line\FL Studio\Presets\Plugin database\Installed\Generators`
 
+- **Output Folder**: Should be from the `\Plugin database\` folder
+  - For Effects: `C:\Users\{YourUsername}\Documents\Image-Line\FL Studio\Presets\Plugin database\Effects`
+  - For Generators: `C:\Users\{YourUsername}\Documents\Image-Line\FL Studio\Presets\Plugin database\Generators`
 
-**USERNAME** in the folder paths _should_ automatically be set to your Windows username. if not, run the **organizeCUSTOM.py** script.
-
-**organizeCUSTOM.py** - You choose both paths.
-
-Results for the default scripts
-
-- C:\Users\USERNAMEl\Documents\Image-Line\FL Studio\Presets\Plugin database\Effects\USER\ [COMPANY] (Such as Waves)
-
-- C:\Users\USERNAME\Documents\Image-Line\FL Studio\Presets\Plugin database\Generators\USER\ [COMPANY] (Such as Roland)
-
-
-**BEFORE RUNNING ANY OF THE PYTHON SCRIPTS**
-
-Once you're done with the steps below, you might see some Fruity plugins on the "New" VST folder. 
-Just delete them. Most of them start with 'Fruity'; should be easy to spot.
-
-![Screenshot_262](https://github.com/Magabes/FL-Studio-Automatic-Plugin-Organizer/assets/90144228/51fcb389-2149-4e71-b40b-65bd48920aa6)
-
-![Image](https://user-images.githubusercontent.com/90144228/250405164-f7ed76cf-6bae-4df3-82e9-17b6d5db599b.png)
-
-
-**EXAMPLE OF HOW IT'LL LOOK**
-
-![Screenshot_264](https://github.com/Magabes/FL-Studio-Automatic-Plugin-Organizer/assets/90144228/697d62fa-220c-4220-9794-d31b4daa4227)
-
-![Screenshot_265](https://github.com/Magabes/FL-Studio-Automatic-Plugin-Organizer/assets/90144228/7681a2db-1541-4d35-914a-23f341b2c5d8)
-
-
-
+## Notes
+- The application is designed to work with FL Studio 21 but may function with earlier versions. 
+- If your plugin files are located on a different drive, you can change the input and output folder paths using the provided GUI options.
